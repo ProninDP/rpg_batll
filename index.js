@@ -87,6 +87,7 @@ function game(health){
             console.log('Вы проиграли!');
             break;
         }
+      break;
     }
   }
 }
