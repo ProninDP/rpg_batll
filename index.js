@@ -73,8 +73,8 @@ function game(health){
         temp_mag.physicArmorPercents += hero.mag.moves[move].physicArmorPercents;
         temp_mag.magicArmorPercents += hero.mag.moves[move].magicArmorPercents;
       }
-          mag_health = mag_health - (temp_monster.physicalDmg - (temp_monster.physicalDmg/100*temp_mag.physicArmorPercents) + temp_monster.magicDmg - (temp_monster.magicDmg/100*temp_mag.magicArmorPercents));
-          monster_health = monster_health - (temp_mag.physicalDmg - (temp_mag.physicalDmg/100*temp_monster.physicArmorPercents) + temp_mag.magicDmg - (temp_mag.magicDmg/100*temp_monster.magicArmorPercents));
+          mag_health = mag_health - (temp_monster.physicalDmg - ((temp_monster.physicalDmg/100)*temp_mag.physicArmorPercents) + temp_monster.magicDmg - ((temp_monster.magicDmg/100)*temp_mag.magicArmorPercents));
+          monster_health = monster_health - (temp_mag.physicalDmg - ((temp_mag.physicalDmg/100)*temp_monster.physicArmorPercents) + temp_mag.magicDmg - ((temp_mag.magicDmg/100)*temp_monster.magicArmorPercents));
       cooldownMonster += 1;
           cooldownMag += 1;
           console.log(`Осталось жизней у Вас: ${mag_health}`);
