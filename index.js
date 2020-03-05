@@ -61,13 +61,13 @@ function game(health){
                         "physicArmorPercents": 0,
                         "magicArmorPercents": 0
       };
-      for(let move in monster_moves){
+      for(let move of monster_moves){
         temp_monster.physicalDmg += enemy.monster.moves[move].physicalDmg;
         temp_monster.magicDmg += enemy.monster.moves[move].magicDmg;
         temp_monster.physicArmorPercents += enemy.monster.moves[move].physicArmorPercents;
         temp_monster.magicArmorPercents += enemy.monster.moves[move].magicArmorPercents;
       }
-      for(let move in mag_moves){
+      for(let move of mag_moves){
         temp_mag.physicalDmg += hero.mag.moves[move].physicalDmg;
         temp_mag.magicDmg += hero.mag.moves[move].magicDmg;
         temp_mag.physicArmorPercents += hero.mag.moves[move].physicArmorPercents;
